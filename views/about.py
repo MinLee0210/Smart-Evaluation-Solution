@@ -9,7 +9,7 @@ st.sidebar.write("App created by AIO_Explorer")
 # ----- Main content -----
 # st.subheader("AIO_Explorer Stories")
 st.markdown(
-"""
+    """
 ## AIO_Explorer: Unveiling Strategy Magic with GenAI
 
 Welcome to AIO_Explorer, where a team of passionate visionaries is revolutionizing marketing analysis through the power of Generative AI (GenAI). Our mission is to harness AI's potential to extract profound insights from visual data, offering a fresh perspective on understanding consumer behavior and trends.
@@ -22,7 +22,7 @@ Once upon a time, four individuals from diverse backgrounds embarked on a shared
 
 * **Khoa Le** ([LinkedIn](https://www.linkedin.com/in/khoale-maiu/)): Khoa, the Business Strategist, integrated deep marketing insights with strategic initiatives. His ability to align projects with business goals and market needs ensured the team's efforts were both visionary and practical.
 
-* **Ngoc Dai Tran** ([LinkedIn](https://www.linkedin.com/in/ngoc-dai-tran-621b62292/)): As an expert in market analysis, Ngoc Dai provided essential insights that guided product development and market strategies. His research skills were instrumental in shaping the team's approach to understanding consumer trends.
+* **Ngoc Dai Tran** ([LinkedIn](https://www.linkedin.com/in/ngoc-dai-tran-621b62292/)): An Information Technology student at the Ho Chi Minh University of Science.
 
 * **Man Pham** ([LinkedIn](https://www.linkedin.com/in/m%E1%BA%ABn-ph%E1%BA%A1m-47b493311/)): Specializing in AI research, Man explored the latest advancements in artificial intelligence. His passion for cutting-edge technology ensured the team stayed ahead of the curve and integrated the best AI solutions into their projects.
 

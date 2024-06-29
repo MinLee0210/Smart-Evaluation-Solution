@@ -5,7 +5,8 @@ DEFAULT_TOP_K = 20
 DEFAULT_TOP_P = 0.8
 DEFAULT_NUM_OUTPUTS = 5096  # tokens
 
-keywords = ["heineken", "tiger", "biaviet", "larue", "bivina", "edelweiss", "bialacviet", "strongbow", "biasaigon"]
+keywords = ["heineken", "tiger", "biaviet", "larue", "bivina",
+            "edelweiss", "bialacviet", "strongbow", "biasaigon"]
 
 PREDEFINED_CLASS = """
 heineken_logo
@@ -129,8 +130,17 @@ Criteria:
 """
 
 CONTEXT = ["in the outdoor_venue",
-"in the indoor_venue",
-"in the bar or night_club", "in the restaurant",
-"in the store",
-"in the supermarket"
-]
+           "People are shopping",
+           "in the bar or the pub or the night_club",
+           "in the restaurant",
+           "in the store",
+           "in the big supermarket",
+           "A display counter"
+           "A party or the celebration",
+           "A gathering",
+           "A happy hour, or a fun time",
+           "A fun time",
+           "There are some beer carton",
+           "There are some Promotional Material: Signage, billboard, poster, standee ",
+           "People is taking photo"
+           ]
