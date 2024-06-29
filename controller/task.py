@@ -61,11 +61,11 @@ def ses_pipeline(image,
     # Extract context of 
     (max_value, max_index, img_context) = classificator.invoke(image, context, return_max_context=True)
 
-    detections = detector(image=image)
+    detections = detector.invoke(image=image)
     
     detected_obj = list(set([dt_res.label for dt_res in detections]))
 
-    insight = analyze_image_information(model=groq_agent, 
+    insight = analyze_image_information(model=gemini_agent, 
                                     image_context=img_context,
                                     image_detection = detected_obj, 
                                     image_ocr=image_ocr)

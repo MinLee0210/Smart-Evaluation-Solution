@@ -8,7 +8,7 @@ GROQ_API_KEY = os.getenv("X")
 
 import streamlit as st
 
-from controller.task import ses_pipeline
+from controller.task import ses_pipeline, get_annotate_image
 from src.tools import load_image, get_image
 
 # ----- From Navigation bar ----- 
@@ -48,24 +48,27 @@ st.write("")
 st.header("Upload Image")
 uploaded_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "png"])
 
-if uploaded_file is not None:
-    # Load the image
-    image = get_image(uploaded_file)
-    st.image(image, caption='Uploaded Image', use_column_width=True)
+with st.status("Please wait ..."): 
+    if uploaded_file is not None:
+        # Load the image
+        image = get_image(uploaded_file)
+        st.image(image, caption='Uploaded Image', use_column_width=True)
+        end_result = ses_pipeline(image=image)
 
-    end_result = ses_pipeline(image=image)
+        detected_obj = end_result['detected_obj']
+        context = end_result['image_context']
+        insight = end_result['insight'].text
 
-    detected_obj = end_result['detected_obj']
-    context = end_result['image_context']
-    insight = end_result['insight']
+        annotated_img = get_annotate_image(end_result['detection'])
+        st.image(annotated_img, caption='Annotated Image', use_column_width=True)
+        
+        st.subheader("Detected Object")
+        st.write(detected_obj)
+        st.divider()
+        st.subheader("Context")
+        st.write(context)
+        st.divider()
 
-    st.subheader("Detected Object")
-    st.write(detected_obj)
-    st.divider()
-    st.subheader("Context")
-    st.write(context)
-    st.divider()
 
-
-    with st.expander("# Smart Analysis"):
-        st.markdown(insight)
+        with st.expander("# Smart Analysis"):
+            st.markdown(insight)
