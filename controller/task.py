@@ -3,12 +3,16 @@ import os
 from src.agent.classification import ObjectClassificator
 from src.agent.detection import ObjectDectector
 from src.agent.text_ocr import OCRAgent
-from src.agent.groq import GroqAgent
+from src.agent.llm import GroqAgent, GeminiAgent
 
 from src.agent.constants import keywords, CONTEXT
 
 GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
+GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
+
 groq_agent = GroqAgent(api_key=GroqAgent)
+gemini_agent = GeminiAgent(api_key=GEMINI_API_KEY)
+
 detector = ObjectDectector()
 classificator = ObjectClassificator()
 ocr_agent = OCRAgent()
