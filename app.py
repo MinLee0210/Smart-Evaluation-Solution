@@ -3,7 +3,7 @@ from st_pages import Page, show_pages
 
 
 st.set_page_config(
-    layout="centered", page_title="Doco-DocumentCompressor", page_icon="static/doco_logo.jpg"
+    layout="centered", page_title="SES", page_icon="static/doco_logo.jpg"
 )
 
 show_pages(
