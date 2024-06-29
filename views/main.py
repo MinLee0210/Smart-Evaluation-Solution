@@ -55,17 +55,17 @@ if uploaded_file is not None:
 
     end_result = ses_pipeline(image=image)
 
-detected_obj = end_result['detected_obj']
-context = end_result['image_context']
-insight = end_result['insight']
+    detected_obj = end_result['detected_obj']
+    context = end_result['image_context']
+    insight = end_result['insight']
 
-st.subheader("Detected Object")
-st.write(detected_obj)
-st.divider()
-st.subheader("Context")
-st.write(context)
-st.divider()
+    st.subheader("Detected Object")
+    st.write(detected_obj)
+    st.divider()
+    st.subheader("Context")
+    st.write(context)
+    st.divider()
 
 
-with st.expander("# Smart Analysis"):
-    st.markdown(insight)
+    with st.expander("# Smart Analysis"):
+        st.markdown(insight)
