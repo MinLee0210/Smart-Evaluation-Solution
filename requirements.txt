@@ -1,3 +1,4 @@
+dotenv
 streamlit 
 st_pages 
 groq 
