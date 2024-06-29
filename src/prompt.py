@@ -242,8 +242,6 @@ Answer:
 
 
 # Prompts for story-telling tasks.
-
-
 FOCUSED_CRITERIA = """
 Criteria:
 1. Brand Logos: Identify any brand logos mentioned in the description or OCR results.

@@ -18,3 +18,5 @@ def load_image(image_str: str) -> Image.Image:
 def get_samples(): 
     "Fetch image samples for testing"
     ...
+
+    

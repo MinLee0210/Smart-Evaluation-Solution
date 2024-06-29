@@ -5,7 +5,7 @@ from src.agent.detection import ObjectDectector
 from src.agent.text_ocr import OCRAgent
 from src.agent.groq import GroqAgent
 
-
+from src.agent.constants import keywords, CONTEXT
 GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
 groq_agent = GroqAgent(api_key=GroqAgent)
 detector = ObjectDectector()
@@ -43,8 +43,8 @@ def analyze_image_information(model,
     return chat_completion
 
 def ses_pipeline(image, 
-             context,
-             keywords): 
+             context=CONTEXT,
+             keywords=keywords): 
     
     # Extract text from Image via OCR
     image_ocr = ocr_agent.invoke(image, keywords)
