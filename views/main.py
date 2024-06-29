@@ -55,13 +55,14 @@ with st.status("Please wait ..."):
         st.image(image, caption='Uploaded Image', use_column_width=True)
         end_result = ses_pipeline(image=image)
 
+        detections = end_result['detections']
         detected_obj = end_result['detected_obj']
         context = end_result['image_context']
         insight = end_result['insight'].text
 
-        annotated_img = get_annotate_image(end_result['detection'])
+        annotated_img = get_annotate_image(detections)
         st.image(annotated_img, caption='Annotated Image', use_column_width=True)
-        
+
         st.subheader("Detected Object")
         st.write(detected_obj)
         st.divider()
