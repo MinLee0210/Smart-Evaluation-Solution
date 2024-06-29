@@ -40,4 +40,4 @@ class ObjectClassificator:
         if return_max_context: 
             return max_value, max_index, context[max_index]
         else: 
-            return max_value, max_index, 
+            return max_value, max_index
