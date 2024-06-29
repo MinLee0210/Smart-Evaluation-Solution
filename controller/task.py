@@ -1,7 +1,8 @@
 import os
+from PIL import Image
 
 from src.agent.classification import ObjectClassificator
-from src.agent.detection import ObjectDectector
+from src.agent.detection import ObjectDectector, annotate
 from src.agent.text_ocr import OCRAgent
 from src.agent.llm import GroqAgent, GeminiAgent
 
@@ -17,6 +18,9 @@ detector = ObjectDectector()
 classificator = ObjectClassificator()
 ocr_agent = OCRAgent()
 
+def get_annotate_image(images): 
+    imgs = Image.fromarray(images)
+    return imgs
 
 def analyze_image_information(model, 
                               image_context, 
