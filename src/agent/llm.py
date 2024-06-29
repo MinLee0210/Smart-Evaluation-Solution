@@ -1,5 +1,34 @@
 import os
-from typing import Optional, Any, Dict
+from typing import Optional, Dict, Any
+
+try:
+    from groq import Groq
+except ImportError:
+    raise ValueError(
+        "Groq is not installed. Please install it with "
+        "`pip install 'groq'`."
+    )
+
+class GroqAgent: 
+
+    def __init__(self, 
+                api_key: Optional[str]=None, 
+                model_name: Optional[str]="llama3-8b-8192"): 
+        self.model_name = model_name
+        self._model = Groq(api_key=api_key or os.environ["GROQ_API_KEY"],
+                        max_retries=5)        
+
+    def chat(self, prompt): 
+        usr_msg = {"role": "user", 
+                   "content": prompt}
+        messages = [usr_msg]
+        try: 
+            chat_completion = self._model.chat.completions.create(messages=messages, 
+                                                                  model=self.model_name)
+            return chat_completion.choices[0].message.content
+        except: 
+            raise Exception("Failed to send request to Groq.")
+        
 
 try:
     import google.generativeai as genai
@@ -9,7 +38,6 @@ except ImportError:
         "`pip install 'google-generativeai'`."
     )
 from google.generativeai.types import HarmCategory, HarmBlockThreshold
-from pydantic import Field, PrivateAttr
 
 from src.agent.constants import DEFAULT_CANDIDATE_COUNT, DEFAULT_NUM_OUTPUTS, DEFAULT_TEMPERATURE, DEFAULT_TOP_K, DEFAULT_TOP_P
 
@@ -42,12 +70,6 @@ _safety_setting = {
 }
 
 class GeminiAgent:
-    model_name: str = Field(
-        default=GEMINI_MODELS["gemini-1.5-flash"], description="The Gemini model to use."
-    )
-    _model: "genai.GenerativeModel" = PrivateAttr()
-    _model_meta: "genai.types.Model" = PrivateAttr()
-    
 
     def __init__(self, 
                 api_key: Optional[str] = None,
@@ -58,7 +80,7 @@ class GeminiAgent:
                  ): 
 
         config_params: Dict[str, Any] = {
-            "api_key": api_key or os.getenv("GOOGLE_API_KEY"),
+            "api_key": api_key or os.getenv("GEMINI_API_KEY"),
         }
         genai.configure(**config_params)
 
@@ -86,11 +108,11 @@ class GeminiAgent:
     def get_model(self): 
         return self._model_meta
     
-    def chat(self, prompt:str, image): 
+    def chat(self, prompt:str,): 
         messages = []
         user_msg = {
             "role": "user", 
-            "parts": [prompt, image]
+            "parts": prompt
         }
         if hasattr(self, "system_prompt"): 
             messages.append(self.system_prompt)

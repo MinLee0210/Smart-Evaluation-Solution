@@ -5,7 +5,7 @@ import streamlit as st
 st.title("AI-Powered Image Analysis for Heineken Vietnam")
 
 # Adding an image
-st.image("./UTI/static/flow.png", caption="Production Flow", use_column_width=True)
+st.image("./docs/static/flow.png", caption="Production Flow", use_column_width=True)
 
 
 st.markdown("""

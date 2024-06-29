@@ -1,10 +1,11 @@
 """Set of constants."""
 DEFAULT_CANDIDATE_COUNT = 1
-DEFAULT_TEMPERATURE = 0.8
+DEFAULT_TEMPERATURE = 1.
 DEFAULT_TOP_K = 20
 DEFAULT_TOP_P = 0.8
-DEFAULT_NUM_OUTPUTS = 50  # tokens
+DEFAULT_NUM_OUTPUTS = 5096  # tokens
 
+keywords = ["heineken", "tiger", "biaviet", "larue", "bivina", "edelweiss", "bialacviet", "strongbow", "biasaigon"]
 
 PREDEFINED_CLASS = """
 heineken_logo
@@ -16,7 +17,6 @@ edelweiss_logo
 bialacviet_logo
 strongbow_logo
 biasaigon_logo
-
 heineken_boxes
 tiger_boxes
 biaviet_boxes
@@ -26,7 +26,6 @@ edelweiss_boxes
 bialacviet_boxes
 strongbow_boxes
 biasaigon_boxes
-
 heineken_poster
 heineken_banner
 heineken_billboard
@@ -81,7 +80,6 @@ biasaigon_billboard
 biasaigon_table_tent
 biasaigon_digital_screen
 biasaigon_standee
-
 heineken_beer_keg
 heineken_beer_bottle
 heineken_beer_can
@@ -118,41 +116,21 @@ biasaigon_beer_keg
 biasaigon_beer_bottle
 biasaigon_beer_can
 biasaigon_special_edition_package
-
-consumer
-promoter
-staff
-customer_buying
-customer_interacting
-staff_restocking
-
-# bar
-# restaurant
-# grocery_store
-# supermarket
-# convenience_store
-# night_club
-# outdoor_venue
-# indoor_venue
-
-# qr_code
-# price_tag
-# inventory_shelf
-# vehicle_advertisement
-# ceiling_hanging
-# branding_placement_compliance
-# regulatory_compliance_sign
-# health_and_safety_signage
-# interior_view
-# exterior_view
-# counter_area
-# seating_area
-# entrance
-
-# consumer_group
-# consumer_solo
-# family_group
-# business_meeting
-# casual_dining
-# formal_event
+person
 """
+
+FOCUSED_CRITERIA = """
+Criteria:
+1. Brand Logos: Identify any brand logos mentioned in the description or OCR results.
+2. Products: Mention any products such as beer kegs and bottles.
+3. Customers: Describe the number of customers, their activities, and emotions.
+4. Promotional Materials: Identify any posters, banners, and billboards.
+5. Setup Context: Determine the scene context (e.g., bar, restaurant, grocery store, or supermarket).
+"""
+
+CONTEXT = ["in the outdoor_venue",
+"in the indoor_venue",
+"in the bar or night_club", "in the restaurant",
+"in the store",
+"in the supermarket"
+]

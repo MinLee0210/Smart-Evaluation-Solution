@@ -1,0 +1,11 @@
+python-dotenv
+streamlit 
+st_pages 
+groq 
+paddlepaddle 
+paddleocr
+fuzzywuzzy
+python-Levenshtein
+ftfy 
+regex  
+git+https://github.com/openai/CLIP.git
