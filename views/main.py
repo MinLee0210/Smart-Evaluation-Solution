@@ -48,11 +48,12 @@ st.write("")
 st.header("Upload Image")
 uploaded_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "png"])
 
-with st.status("Please wait ..."): 
-    if uploaded_file is not None:
-        # Load the image
-        image = get_image(uploaded_file)
-        st.image(image, caption='Uploaded Image', use_column_width=True)
+if uploaded_file is not None:
+    # Load the image
+    image = get_image(uploaded_file)
+    st.image(image, caption='Uploaded Image', use_column_width=True)
+    with st.status("Please wait ..."): 
+
         end_result = ses_pipeline(image=image)
 
         detections = end_result['detections']
@@ -60,8 +61,8 @@ with st.status("Please wait ..."):
         context = end_result['image_context']
         insight = end_result['insight'].text
 
-        annotated_img = get_annotate_image(detections)
-        st.image(annotated_img, caption='Annotated Image', use_column_width=True)
+        # annotated_img = get_annotate_image(detections)
+        # st.image(annotated_img, caption='Annotated Image', use_column_width=True)
 
         st.subheader("Detected Object")
         st.write(detected_obj)
@@ -70,6 +71,5 @@ with st.status("Please wait ..."):
         st.write(context)
         st.divider()
 
-
-        with st.expander("# Smart Analysis"):
-            st.markdown(insight)
+    with st.expander("# Smart Analysis"):
+        st.markdown(insight)
