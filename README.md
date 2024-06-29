@@ -1,32 +1,32 @@
+<p align="center">
+  <img src="https://i.ibb.co/hR2kbXD/icon22.png" width="180" >
+</p>
+<h1 align="center">Smart Evaluation Solution</h1>
 
-# SES - Smart Evaluation Solution
+<p align="center">
+  <em>This project is a collaborative effort to integrate cutting-edge AI technologies into Heineken Vietnam's operations, enhancing efficiency, customer experience, and strategic decision-makin</em>
+</p>
 
-Welcome to the SES - Smart Evaluation Solution project repository! This project is a collaborative effort to integrate cutting-edge AI technologies into Heineken Vietnam's operations, enhancing efficiency, customer experience, and strategic decision-making.
+---
 
-## Table of Contents
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
 
-- [Introduction](#introduction)
-- [Project Overview](#project-overview)
-- [Workflow](#workflow)
-  - [Data Collection](#data-collection)
-  - [Data Review and Correction](#data-review-and-correction)
-  - [Feature Extraction and Data Labeling](#feature-extraction-and-data-labeling)
-  - [Data Analysis and Context Identification](#data-analysis-and-context-identification)
-  - [Predictive Modeling and Trend Analysis](#predictive-modeling-and-trend-analysis)
-  - [Reporting and Strategic Adjustments](#reporting-and-strategic-adjustments)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [📍 Overview](#-overview)
+- [Workflow](#-workflow)
+- [👾 Demo](#-demo)
+- [🧩 Features](#-features)
+- [🤖Technologies Used](#-technologies-used)
+- [🚀 Usage](#-getting-started)
+- [🧑‍💻 Contributing](#-contributing)
+</details>
 
-## Introduction
+## 📍 Overview
 
 HEINEKEN Vietnam, the leading beer producer in Vietnam, aims to revolutionize brand experience for consumers. From local retail stores to favorite hangout spots with friends, you can easily spot Heineken's advertising materials (banners, posters, LED signs, etc.). These elements contribute to an engaging and memorable experience for customers. However, manually inspecting and evaluating these setups through images is time-consuming and costly for the company.
 
-## Project Overview
-
-As part of HEINEKEN Vietnam's Digital & Technology (D&T) team, our mission is to develop an image analysis tool that can automatically detect the following elements:
+Our mission is to develop an image analysis tool that can automatically detect the following elements:
 
 1. **Brand Logos**: Detect logos of Heineken, Tiger, Bia Viet, Larue, Bivina, Edelweiss, and Strongbow.
 2. **Products**: Recognize beer cases and bottles.
@@ -35,78 +35,64 @@ As part of HEINEKEN Vietnam's Digital & Technology (D&T) team, our mission is to
 5. **Image Context**: Analyze the location—restaurant, bar, grocery store, or supermarket, etc.
 
 This project leverages advanced AI technologies, including Optical Character Recognition (OCR) and Large Language Models (LLMs), to process and analyze data collected from various retail settings. The workflow ensures data accuracy, extracts meaningful features, and generates predictive insights that guide strategic adjustments.
+## Workfow
+![image](https://github.com/ngocdai101004/Smart-Evaluation-Solution/assets/121254456/6e17b750-6220-4606-84d2-fdff5b056ce1)
 
-## Workflow
 
-![Workflow Diagram](path/to/image.png)
+## 🤖Technologies Used
 
-### Data Collection
+- _Optical Character Recognition (OCR)_
+- _Large Language Models (LLMs)_
+- _Machine Learning and AI Algorithms_
+- _Data Analysis and Visualization Tools_
 
-**Gather Image Data**: The process begins with collecting image data from retail environments such as bars and supermarkets. This data forms the foundation for subsequent analysis and insights.
+## 👾 Demo
 
-### Data Review and Correction
+## 🧩 Features
 
-**Review and Correct Data**: Collected data is reviewed and corrected to ensure accuracy. This step is crucial to maintain the integrity of the subsequent analysis.
+### 1. Object Detection: Accurately identifies objects within images using advanced GenAI models.
 
-### Feature Extraction and Data Labeling
+### 2. Insight Generation: Offers suggestions based on detected objects and user-provided context.
 
-**Extract Features using OCR**: Utilizing OCR technology, we extract relevant features from the corrected data, converting visual information into structured data.
+### 3. User-Friendly Interface: Easy to use and understand, allowing for quick and efficient analysis.
 
-**Label Data**: Extracted features are then labeled, creating a dataset ready for further analysis and model training.
+## 🚀 Usage
 
-### Data Analysis and Context Identification
+### 1. Installation:
 
-**Check Data Labeling Accuracy**: The accuracy of labeled data is verified. If discrepancies are found, data is sent back for review and correction. Accurate data is crucial for reliable analysis.
-
-**Analyze Data for Key Contexts**: Labeled data is analyzed to identify key contexts and insights, providing a deep understanding of trends and patterns.
-
-### Predictive Modeling and Trend Analysis
-
-**Predict Trends using AI Models**: Advanced AI models predict future trends based on analyzed data, offering foresight into market dynamics and consumer behavior.
-
-### Reporting and Strategic Adjustments
-
-**Generate Reports**: Comprehensive reports are generated, summarizing insights and predictions. These reports guide strategic decision-making.
-
-**Implement Strategic Adjustments**: Insights are used to implement strategic adjustments, optimizing operations and enhancing customer engagement.
-
-## Technologies Used
-
-- **Optical Character Recognition (OCR)**
-- **Large Language Models (LLMs)**
-- **Machine Learning and AI Algorithms**
-- **Data Analysis and Visualization Tools**
-
-## Installation
-
-To get started with this project, clone the repository and install the necessary dependencies:
-
-```bash
-git clone https://github.com/Heineken-Vietnam/SES-Smart-Evaluation-Solution.git
-cd SES-Smart-Evaluation-Solution
+```Python
+git clone https://github.com/What-s-behind/UTI
+cd /UTI
 pip install -r requirements.txt
 ```
 
-## Usage
+### 2. Setup the environment
 
-Follow these steps to use the Smart Evaluation Solution:
+Then, you are required to get the API key from Gemini and Groq:
 
-1. **Data Collection**: Gather image data from retail environments.
-2. **Data Review and Correction**: Use the provided scripts to review and correct data.
-3. **Feature Extraction**: Run the OCR feature extraction tool.
-4. **Data Labeling**: Label the extracted features using the labeling tool.
-5. **Data Analysis**: Analyze the labeled data using our analysis scripts.
-6. **Predictive Modeling**: Use AI models to predict trends and generate reports.
-7. **Strategic Adjustments**: Implement insights from the reports to optimize operations.
+- [Gemini's API key](https://aistudio.google.com/app/apikey)
+- [Groq's API key](https://console.groq.com/keys)
 
-## Contributing
+After that, let's create a `.env` file and follow this format:
 
-We welcome contributions from the community! Please read our [contributing guidelines](CONTRIBUTING.md) for more information on how to get involved.
+```
+GEMINI_API_KEY="GEMINI_API_KEY"
+GROQ_API_KEY="GROQ_API_KEY"
+```
 
-## License
+> We leave the `.env.examples` as a template for implementing our environment.
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+### 3. Running the Application:
 
----
+Navigate to the project directory in your terminal. Run the following command:
 
-Feel free to adjust the content and links according to your project specifics and structure.
+```
+streamlit run app.py
+```
+
+## 🧑‍💻 Contributing
+
+- _Lê Đức Minh_ | **LinkedIn:** [/in/minh-le-duc/](https://www.linkedin.com/in/minh-le-duc-a62863172/) | **Gmail:** minh.leduc.0210@gmail.com
+- _Lê Nguyễn Đăng Khoa_ | **LinkedIn:** [/in/khoale-maiu/](https://www.linkedin.com/in/khoale-maiu/) | **Gmail:** khoale.maiu@gmail.com
+- _Trần Ngọc Đại_ | **LinkedIn:** [/in/ngoc-dai-tran/](https://www.linkedin.com/in/ngoc-dai-tran-621b62292/) | **Gmail:** ngocdai101004@gmail.com
+- _Phạm Minh Mẫn_ | **LinkedIn:** [/in/man-pham/](https://www.linkedin.com/in/m%E1%BA%ABn-ph%E1%BA%A1m-47b493311/) | **Gmail:** phamminhman1312005@gmail.com
