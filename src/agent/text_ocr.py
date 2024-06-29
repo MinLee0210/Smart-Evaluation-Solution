@@ -5,7 +5,7 @@ from fuzzywuzzy import fuzz, process
 
 import numpy as np
 
-from constants import keywords
+from src.agent.constants import keywords
 
 class OCRAgent: 
     def __init__(self): 

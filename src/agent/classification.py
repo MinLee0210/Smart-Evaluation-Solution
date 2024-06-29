@@ -1,7 +1,7 @@
 import clip
 import torch
 
-from constants import CONTEXT
+from src.agent.constants import CONTEXT
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 

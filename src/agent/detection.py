@@ -9,7 +9,7 @@ import torch
 from transformers import (AutoProcessor, AutoModelForZeroShotObjectDetection, 
                           pipeline)
 
-from constants import PREDEFINED_CLASS
+from src.agent.constants import PREDEFINED_CLASS
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 model_id = "IDEA-Research/grounding-dino-tiny"
