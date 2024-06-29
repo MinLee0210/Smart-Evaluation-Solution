@@ -7,6 +7,10 @@ def to_markdown(text):
   text = text.replace('•', '  *')
   return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
 
+def get_image(image): 
+    image = Image.open(image).convert("RGB")
+    return image
+
 def load_image(image_str: str) -> Image.Image:
     if image_str.startswith("http"):
         image = Image.open(requests.get(image_str, stream=True).raw).convert("RGB")

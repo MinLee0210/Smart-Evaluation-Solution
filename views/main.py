@@ -8,8 +8,8 @@ GROQ_API_KEY = os.getenv("X")
 
 import streamlit as st
 
-from controller.task import sec_pipeline
-from src.tools import load_image
+from controller.task import ses_pipeline
+from src.tools import load_image, get_image
 
 # ----- From Navigation bar ----- 
 st.sidebar.write("")
@@ -30,8 +30,7 @@ st.sidebar.write(
 left_co, cent_co,last_co = st.columns(3)
 with cent_co:
     st.image(
-        "static/angelhack.webp",
-        width=100,
+        "./docs/static/angelhack.webp",
     )
 st.caption("")
 st.title("AIO_Explorer")
@@ -51,10 +50,11 @@ uploaded_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "p
 
 if uploaded_file is not None:
     # Load the image
-    image = load_image(uploaded_file)
+    image = get_image(uploaded_file)
     st.image(image, caption='Uploaded Image', use_column_width=True)
 
-end_result = sec_pipeline(image=image)
+    end_result = ses_pipeline(image=image)
+
 detected_obj = end_result['detected_obj']
 context = end_result['image_context']
 insight = end_result['insight']
