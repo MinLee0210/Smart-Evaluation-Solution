@@ -82,7 +82,7 @@ def plot_detections(
     plt.show()
 
 class ObjectDectector: 
-    def __init__(self, model_id, device:Union[str, None]=device, **kwargs): 
+    def __init__(self, model_id=model_id, device:Union[str, None]=device, **kwargs): 
         self.model, self.processor = self.__set_model(model_id=model_id, 
                                                       device=device)
 
