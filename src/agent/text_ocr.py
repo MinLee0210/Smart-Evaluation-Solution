@@ -2,6 +2,7 @@ from PIL import Image
 
 from paddleocr import PaddleOCR, draw_ocr
 from fuzzywuzzy import fuzz, process
+
 import numpy as np
 
 from constants import keywords
