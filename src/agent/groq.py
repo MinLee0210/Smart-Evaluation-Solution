@@ -11,6 +11,7 @@ except ImportError:
 
 from pydantic import Field
 
+
 class GroqAgent: 
     model_name: str = Field(
         default="llama3-8b-8192", description="You can choose any LLMs that the Groq supports."
