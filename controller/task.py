@@ -1,11 +1,11 @@
 import os
 
-from src.agent.classification import ObjectClassificator
-from src.agent.detection import ObjectDectector
-from src.agent.text_ocr import OCRAgent
-from src.agent.groq import GroqAgent
+from ..src.agent.classification import ObjectClassificator
+from ..src.agent.detection import ObjectDectector
+from ..src.agent.text_ocr import OCRAgent
+from ..src.agent.groq import GroqAgent
 
-from src.agent.constants import keywords, CONTEXT
+from ..src.agent.constants import keywords, CONTEXT
 
 GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
 groq_agent = GroqAgent(api_key=GroqAgent)
