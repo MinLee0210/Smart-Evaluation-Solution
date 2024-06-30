@@ -6,7 +6,7 @@ from src.agent.detection import ObjectDectector, annotate
 from src.agent.text_ocr import OCRAgent
 from src.agent.llm import GroqAgent, GeminiAgent
 
-from src.agent.constants import keywords, CONTEXT
+from src.agent.constants import keywords, CONTEXT,  PREDEFINED_CLASSES_BY_GROUP
 
 GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
@@ -26,29 +26,25 @@ def get_annotate_image(images):
 
 def analyze_image_information(model,
                               image_context,
-                              image_detection,
                               image_ocr):
     prompt = f"""
     You are given information that are extracted from a party or a place in which
-    people consume their meal. The information consists of the following parts:
-
-    Image OCR:
-    {image_ocr}
-
-    Image Detection:
-    {image_detection}
+    people consume their meal. The information consists of context, the predefined label by us, the ocr infomation (only use words relating the beer branch: heineken, tiger, bia viet, larue, biniva, strongbow, edelweiss, ...):
 
     Image Context:
     {image_context}
 
-    The answer must follow these question:
-    1. Counting Heineken Drinkers: Distinguish between those drinking Heineken and other beer brands.
-    2. Heineken Event Success Evaluation: Count the number of participants attending the Heineken event at the restaurant in the images.
-    3. Heineken Sales Rep Tracking: Analyze the extracted information from the image to identify objects or features consistent with Heineken sales representatives (keywords like uniform,logo,name tag).
-    4. Heineken In-Store Presence Evaluation: Count the number of Heineken beer cases in stock and confirm there are at least 10. Analyze the extracted information from the image to identify objects consistent with Heineken branding (keywords like signboard,standee,beer case, presence of the Heineken logo)
+    The Object could be appearend:
+    {PREDEFINED_CLASSES_BY_GROUP[image_context]}
 
-    Try to answer it in the most creative and friendly way. You must give some insights based on those information and give a solution to improve Heineken marketing campaign.
-    Answers:
+    Image OCR:
+    {image_ocr}
+
+
+    The answer must follow these question:
+    1. Summary of product appearances for each brand as a table and review them
+    2. Rate the frequency of heineken's appearance in that context.
+    Answer:
     """
     chat_completion = model.chat(prompt)
     return chat_completion
@@ -59,22 +55,22 @@ def ses_pipeline(image,
                  keywords=keywords):
 
     # Extract text from Image via OCR
-    image_ocr = ocr_agent.invoke(image, keywords)
+    image_ocr, ocr_text = ocr_agent.invoke(image, keywords)
+    count_text = ocr_text['word-counts']
 
     # Extract context of
     (max_value, max_index, img_context) = classificator.invoke(
         image, context, return_max_context=True)
 
-    detections = detector.invoke(image=image, context=img_context)
+    # detections = detector.invoke(image=image, context=img_context)
 
-    detected_obj = list(set([dt_res.label for dt_res in detections]))
+    # detected_obj = list(set([dt_res.label for dt_res in detections]))
 
     insight = analyze_image_information(model=gemini_agent,
                                         image_context=img_context,
-                                        image_detection=detected_obj,
                                         image_ocr=image_ocr)
-    return {'detections': detections,
-            'detected_obj': detected_obj,
-            'image_ocr': image_ocr,
+    return {'detections': 'detections',
+            'detected_obj': 'detected_obj',
+            'image_ocr': count_text,
             'image_context': img_context,
             'insight': insight}

@@ -3,6 +3,7 @@ from controller.task import ses_pipeline, get_annotate_image
 import streamlit as st
 import os
 from dotenv import load_dotenv
+from matplotlib import pyplot as plt
 
 load_dotenv()
 
@@ -60,19 +61,39 @@ if uploaded_file is not None:
         detected_obj = end_result['detected_obj']
         image_ocr = end_result['image_ocr']
         context = end_result['image_context']
-        # insight = end_result['insight'].text
-        insight = end_result['insight']
+        insight = end_result['insight'].text
+        # insight = end_result['insight']
 
         # annotated_img = get_annotate_image(detections)
         # st.image(annotated_img, caption='Annotated Image', use_column_width=True)
         st.subheader("Context")
         st.write(context)
         st.divider()
-        st.subheader("Detected Object")
-        st.write(detected_obj)
-        st.divider()
         st.subheader("OCR")
         st.write(image_ocr)
+        st.title('Beer Popularity Bar Chart')
+
+        # Extract keys and values
+        labels = list(image_ocr.keys())
+        values = list(image_ocr.values())
+
+        # Create a bar chart
+        fig, ax = plt.subplots(figsize=(10, 6))
+        ax.bar(labels, values, color='skyblue')
+
+        # Add title and labels
+        ax.set_title('Beer Popularity')
+        ax.set_xlabel('Beer Brands')
+        ax.set_ylabel('Counts')
+
+        # Rotate x-axis labels for better readability
+        plt.xticks(rotation=45, ha='right')
+
+        # Add grid lines for better readability
+        ax.grid(axis='y', linestyle='--', alpha=0.7)
+
+        # Display the plot in Streamlit
+        st.pyplot(fig)
 
         st.divider()
 
