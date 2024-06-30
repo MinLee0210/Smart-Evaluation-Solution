@@ -36,7 +36,7 @@ Our mission is to develop an image analysis tool that can automatically detect t
 
 This project leverages advanced AI technologies, including Optical Character Recognition (OCR) and Large Language Models (LLMs), to process and analyze data collected from various retail settings. The workflow ensures data accuracy, extracts meaningful features, and generates predictive insights that guide strategic adjustments.
 ## Workfow
-![image](https://github.com/ngocdai101004/Smart-Evaluation-Solution/assets/121254456/6e17b750-6220-4606-84d2-fdff5b056ce1)
+![image](https://ibb.co/S0M9P1w?fbclid=IwZXh0bgNhZW0CMTAAAR1AajzFMDkr9jV1Bq-W4rsqImzQjwgNimgXlFd0MU6TxBKl26pRMXlZUvc_aem_XCymOnqvj3HFDH66iZXQDA)
 
 
 ## 🤖Technologies Used
@@ -50,19 +50,19 @@ This project leverages advanced AI technologies, including Optical Character Rec
 
 ## 🧩 Features
 
-### 1. Object Detection: Accurately identifies objects within images using advanced GenAI models.
++ 1. Object Detection: Accurately identifies objects within images using advanced GenAI models.
 
-### 2. Insight Generation: Offers suggestions based on detected objects and user-provided context.
++ 2. Insight Generation: Offers suggestions based on detected objects and user-provided context.
 
-### 3. User-Friendly Interface: Easy to use and understand, allowing for quick and efficient analysis.
++ 3. User-Friendly Interface: Easy to use and understand, allowing for quick and efficient analysis.
 
 ## 🚀 Usage
 
 ### 1. Installation:
 
 ```Python
-git clone https://github.com/What-s-behind/UTI
-cd /UTI
+https://github.com/MinLee0210/Smart-Evaluation-Solution.git
+cd /Smart-Evaluation-Solution
 pip install -r requirements.txt
 ```
 
@@ -90,6 +90,7 @@ Navigate to the project directory in your terminal. Run the following command:
 streamlit run app.py
 ```
 
+For those whose machine can not serve any requirements of any models that we use, we suggest running this app on Colab. We can test the app by tunnelling Colab to our local machine. We leave the link of our Colab experiment [here](https://colab.research.google.com/drive/1vVb9V8_dV0_8v1gZXn-QK7lgkgWjWjfe?usp=sharing). Remember to get NGROK's API key for the best experiment.
 ## 🧑‍💻 Contributing
 
 - _Lê Đức Minh_ | **LinkedIn:** [/in/minh-le-duc/](https://www.linkedin.com/in/minh-le-duc-a62863172/) | **Gmail:** minh.leduc.0210@gmail.com
