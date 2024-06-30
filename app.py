@@ -8,9 +8,9 @@ st.set_page_config(
 
 show_pages(
     [
-        Page("views/home.py", "🏠 Home"), 
-        Page("views/main.py", "🔬 Main Page"), 
-        Page("views/about.py", "🔎 Explorers Story"), 
+        Page("views/home.py", "🏠 Home"),
+        Page("views/main.py", "🔬 Main Page"),
+        Page("views/about.py", "🔎 Explorers Story"),
         Page("views/contact.py", "📨 Contact Us")
     ]
 )
