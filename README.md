@@ -25,7 +25,7 @@
 ## 📍 Overview
 
 HEINEKEN Vietnam, the leading beer producer in Vietnam, aims to revolutionize brand experience for consumers. From local retail stores to favorite hangout spots with friends, you can easily spot Heineken's advertising materials (banners, posters, LED signs, etc.). These elements contribute to an engaging and memorable experience for customers. However, manually inspecting and evaluating these setups through images is time-consuming and costly for the company.
-
+                                                
 Our mission is to develop an image analysis tool that can automatically detect the following elements:
 
 1. **Brand Logos**: Detect logos of Heineken, Tiger, Bia Viet, Larue, Bivina, Edelweiss, and Strongbow.
