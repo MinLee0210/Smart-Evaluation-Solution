@@ -35,6 +35,7 @@ Our mission is to develop an image analysis tool that can automatically detect t
 5. **Image Context**: Analyze the location—restaurant, bar, grocery store, or supermarket, etc.
 
 This project leverages advanced AI technologies, including Optical Character Recognition (OCR) and Large Language Models (LLMs), to process and analyze data collected from various retail settings. The workflow ensures data accuracy, extracts meaningful features, and generates predictive insights that guide strategic adjustments.
+
 ## Workfow
 ![image](https://ibb.co/S0M9P1w?fbclid=IwZXh0bgNhZW0CMTAAAR1AajzFMDkr9jV1Bq-W4rsqImzQjwgNimgXlFd0MU6TxBKl26pRMXlZUvc_aem_XCymOnqvj3HFDH66iZXQDA)
 
@@ -46,6 +47,10 @@ This project leverages advanced AI technologies, including Optical Character Rec
 - _Data Analysis and Visualization Tools_
 
 ## 👾 Demo
+
+<video width="320" height="240" controls>
+  <source src="./docs/demo/demo.mp4" type="video/mp4">
+</video>
 
 ## 🧩 Features
 
