@@ -1,3 +1,6 @@
+from src.tools import load_image, get_image
+from controller.task import ses_pipeline, get_annotate_image
+import streamlit as st
 import os
 from dotenv import load_dotenv
 
@@ -6,12 +9,8 @@ load_dotenv()
 GEMINI_API_KEY = os.getenv("X")
 GROQ_API_KEY = os.getenv("X")
 
-import streamlit as st
 
-from controller.task import ses_pipeline, get_annotate_image
-from src.tools import load_image, get_image
-
-# ----- From Navigation bar ----- 
+# ----- From Navigation bar -----
 st.sidebar.write("")
 
 # API_KEY = st.sidebar.text_input(
@@ -27,7 +26,7 @@ st.sidebar.write(
 )
 
 # ----- From Main side -----
-left_co, cent_co,last_co = st.columns(3)
+left_co, cent_co, last_co = st.columns(3)
 with cent_co:
     st.image(
         "./docs/static/angelhack.webp",
@@ -46,29 +45,35 @@ st.write("")
 # )
 
 st.header("Upload Image")
-uploaded_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader(
+    "Choose an image file", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
     # Load the image
     image = get_image(uploaded_file)
     st.image(image, caption='Uploaded Image', use_column_width=True)
-    with st.status("Please wait ..."): 
+    with st.status("Please wait ..."):
 
         end_result = ses_pipeline(image=image)
 
         detections = end_result['detections']
         detected_obj = end_result['detected_obj']
+        image_ocr = end_result['image_ocr']
         context = end_result['image_context']
-        insight = end_result['insight'].text
+        # insight = end_result['insight'].text
+        insight = end_result['insight']
 
         # annotated_img = get_annotate_image(detections)
         # st.image(annotated_img, caption='Annotated Image', use_column_width=True)
-
+        st.subheader("Context")
+        st.write(context)
+        st.divider()
         st.subheader("Detected Object")
         st.write(detected_obj)
         st.divider()
-        st.subheader("Context")
-        st.write(context)
+        st.subheader("OCR")
+        st.write(image_ocr)
+
         st.divider()
 
     with st.expander("# Smart Analysis"):

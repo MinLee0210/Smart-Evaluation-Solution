@@ -120,6 +120,7 @@ class ObjectDectector:
         detector_id = detector_id if detector_id is not None else "IDEA-Research/grounding-dino-tiny"
         object_detector = pipeline(
             model=detector_id, task="zero-shot-object-detection", device=device)
+        # labels = [label if label.endswith(".") else label+"." for label in labels]
 
         results = object_detector(image,
                                   candidate_labels=labels,
