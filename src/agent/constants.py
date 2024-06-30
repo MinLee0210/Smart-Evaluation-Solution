@@ -8,7 +8,7 @@ DEFAULT_NUM_OUTPUTS = 5096  # tokens
 keywords = ["heineken", "tiger", "biaviet", "larue", "bivina",
             "edelweiss", "bialacviet", "strongbow", "biasaigon"]
 
-PREDEFINED_CLASS = """
+FOCUSED_CRITERIA = """
 heineken_logo
 tiger_logo
 biaviet_logo
@@ -120,14 +120,40 @@ biasaigon_special_edition_package
 person
 """
 
-FOCUSED_CRITERIA = """
-Criteria:
-1. Brand Logos: Identify any brand logos mentioned in the description or OCR results.
-2. Products: Mention any products such as beer kegs and bottles.
-3. Customers: Describe the number of customers, their activities, and emotions.
-4. Promotional Materials: Identify any posters, banners, and billboards.
-5. Setup Context: Determine the scene context (e.g., bar, restaurant, grocery store, or supermarket).
-"""
+PREDEFINED_CLASSES = {
+    "in the outdoor_venue": [
+        # "Heineken logo", "Tiger logo", "Bia Viet logo", "Larue logo", "Bivina logo", "Edelweiss logo", "Strongbow logo",
+        "Beer carton", "Beer bottle", "Beer can"
+    ],
+    "in the indoor_venue": [
+        # "Heineken logo", "Tiger logo", "Bia Viet logo", "Larue logo", "Bivina logo", "Edelweiss logo", "Strongbow logo",
+        "Beer carton", "Beer bottle", "Beer can"
+    ],
+    "in the bar or night_club": [
+        # "Heineken logo", "Tiger logo", "Bia Viet logo", "Larue logo", "Bivina logo", "Edelweiss logo", "Strongbow logo",
+        "Beer carton", "Beer crate", "Beer bottle", "Beer can",
+        "Drinker", "Promotion Girl", "Seller", "Buyer/Customer",
+        "Eating", "Drinking", "Smiling", "Talking", "Shopping",
+        "Happy", "Angry", "Enjoyable", "Relaxed", "Neutral",
+        "Ice bucket", "Ice box", "Fridge", "Signage, billboard, poster, standee", "Tent card, display stand, tabletop", "Parasol"
+    ],
+    "in the restaurant": [
+        # "Heineken logo", "Tiger logo", "Bia Viet logo", "Larue logo", "Bivina logo", "Edelweiss logo", "Strongbow logo",
+         "Beer crate", "Beer bottle", "Beer can",
+        "Drinker", "Promotion Girl", "Seller", "Buyer/Customer",
+        "Eating", "Drinking", "Smiling", "Talking", "Shopping",
+        "Happy", "Angry", "Enjoyable", "Relaxed", "Neutral",
+         "Fridge", "Signage, billboard, poster, standee"
+    ],
+    "in the store": [
+        # "Heineken logo", "Tiger logo", "Bia Viet logo", "Larue logo", "Bivina logo", "Edelweiss logo", "Strongbow logo",
+        "Beer carton", "Beer crate", "Beer bottle", "Beer can","Fridge"
+    ],
+    "in the supermarket": [
+        # "Heineken logo", "Tiger logo", "Bia Viet logo", "Larue logo", "Bivina logo", "Edelweiss logo", "Strongbow logo",
+        "Beer carton", "Beer crate", "Beer bottle", "Beer can","Fridge"
+    ]
+}
 
 CONTEXT = ["in the outdoor_venue",
            "People are shopping",

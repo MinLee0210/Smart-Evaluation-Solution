@@ -6,7 +6,7 @@ from src.agent.detection import ObjectDectector, annotate
 from src.agent.text_ocr import OCRAgent
 from src.agent.llm import GroqAgent, GeminiAgent
 
-from src.agent.constants import keywords, CONTEXT
+from src.agent.constants import keywords, CONTEXT, PREDEFINED_CLASSES
 
 GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
 GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
@@ -61,7 +61,7 @@ def ses_pipeline(image,
     # Extract context of 
     (max_value, max_index, img_context) = classificator.invoke(image, context, return_max_context=True)
 
-    detections = detector.invoke(image=image)
+    detections = detector.invoke(image=image, labels=PREDEFINED_CLASSES['img_context'])
     
     detected_obj = list(set([dt_res.label for dt_res in detections]))
 
