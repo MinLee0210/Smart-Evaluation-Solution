@@ -48,7 +48,7 @@ This project leverages advanced AI technologies, including Optical Character Rec
 
 ## 👾 Demo
 
-<video width="320" height="240" controls>
+<video width="1080" height="720" controls>
   <source src="./docs/demo/demo.mp4" type="video/mp4">
 </video>
 
