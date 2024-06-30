@@ -38,7 +38,6 @@ This project leverages advanced AI technologies, including Optical Character Rec
 ## Workfow
 ![image](https://ibb.co/S0M9P1w?fbclid=IwZXh0bgNhZW0CMTAAAR1AajzFMDkr9jV1Bq-W4rsqImzQjwgNimgXlFd0MU6TxBKl26pRMXlZUvc_aem_XCymOnqvj3HFDH66iZXQDA)
 
-
 ## 🤖Technologies Used
 
 - _Optical Character Recognition (OCR)_
@@ -90,7 +89,7 @@ Navigate to the project directory in your terminal. Run the following command:
 streamlit run app.py
 ```
 
-For those whose machine can not serve any requirements of any models that we use, we suggest running this app on Colab. We can test the app by tunnelling Colab to our local machine. We leave the link of our Colab experiment [here](https://colab.research.google.com/drive/1vVb9V8_dV0_8v1gZXn-QK7lgkgWjWjfe?usp=sharing). Remember to get NGROK's API key for the best experiment.
+For those whose machine can not serve any requirements of any models that we use, we suggest running this app on Colab. We can test the app by tunnelling Colab to our local machine. We leave the link of our Colab experiment [here](./docs/demo/test_SES.ipynb). Remember to get NGROK's API key for the best experiment.
 ## 🧑‍💻 Contributing
 
 - _Lê Đức Minh_ | **LinkedIn:** [/in/minh-le-duc/](https://www.linkedin.com/in/minh-le-duc-a62863172/) | **Gmail:** minh.leduc.0210@gmail.com
