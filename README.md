@@ -25,7 +25,7 @@
 ## 📍 Overview
 
 HEINEKEN Vietnam, the leading beer producer in Vietnam, aims to revolutionize brand experience for consumers. From local retail stores to favorite hangout spots with friends, you can easily spot Heineken's advertising materials (banners, posters, LED signs, etc.). These elements contribute to an engaging and memorable experience for customers. However, manually inspecting and evaluating these setups through images is time-consuming and costly for the company.
-
+                                                
 Our mission is to develop an image analysis tool that can automatically detect the following elements:
 
 1. **Brand Logos**: Detect logos of Heineken, Tiger, Bia Viet, Larue, Bivina, Edelweiss, and Strongbow.
@@ -37,7 +37,7 @@ Our mission is to develop an image analysis tool that can automatically detect t
 This project leverages advanced AI technologies, including Optical Character Recognition (OCR) and Large Language Models (LLMs), to process and analyze data collected from various retail settings. The workflow ensures data accuracy, extracts meaningful features, and generates predictive insights that guide strategic adjustments.
 
 ## Workfow
-![image](https://ibb.co/S0M9P1w?fbclid=IwZXh0bgNhZW0CMTAAAR1AajzFMDkr9jV1Bq-W4rsqImzQjwgNimgXlFd0MU6TxBKl26pRMXlZUvc_aem_XCymOnqvj3HFDH66iZXQDA)
+![image](https://github.com/MinLee0210/Smart-Evaluation-Solution/blob/main/docs/static/449318609_477854324794217_7512219998176185167_n.png)
 
 ## 🤖Technologies Used
 

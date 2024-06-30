@@ -62,8 +62,7 @@ def annotate(image: Union[Image.Image, np.ndarray], detection_results: List[Dete
         # Draw bounding box
         cv2.rectangle(image_cv2, (box.xmin, box.ymin),
                       (box.xmax, box.ymax), color.tolist(), 2)
-        cv2.putText(image_cv2, f'{label}: {
-                    score:.2f}', (box.xmin, box.ymin - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color.tolist(), 2)
+        cv2.putText(image_cv2, f'{label}: {score:.2f}', (box.xmin, box.ymin - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color.tolist(), 2)
         # If mask is available, apply it
         if mask is not None:
             # Convert mask to uint8
