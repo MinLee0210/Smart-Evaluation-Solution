@@ -37,7 +37,7 @@ Our mission is to develop an image analysis tool that can automatically detect t
 This project leverages advanced AI technologies, including Optical Character Recognition (OCR) and Large Language Models (LLMs), to process and analyze data collected from various retail settings. The workflow ensures data accuracy, extracts meaningful features, and generates predictive insights that guide strategic adjustments.
 
 ## Workfow
-![image](https://ibb.co/S0M9P1w?fbclid=IwZXh0bgNhZW0CMTAAAR1AajzFMDkr9jV1Bq-W4rsqImzQjwgNimgXlFd0MU6TxBKl26pRMXlZUvc_aem_XCymOnqvj3HFDH66iZXQDA)
+![image](https://github.com/MinLee0210/Smart-Evaluation-Solution/blob/main/docs/static/449318609_477854324794217_7512219998176185167_n.png)
 
 ## 🤖Technologies Used
 
