@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.ibb.co/hR2kbXD/icon22.png" width="180" >
+  <img src="./docs/static/icon22.png" width="180" >
 </p>
 <h1 align="center">Smart Evaluation Solution</h1>
 
