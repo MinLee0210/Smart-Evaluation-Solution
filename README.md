@@ -52,14 +52,16 @@ This project leverages advanced AI technologies, including Optical Character Rec
   <source src="https://github.com/MinLee0210/Smart-Evaluation-Solution/blob/main/docs/demo/demo.mp4" type="video/mp4">
 </video>
 
+![demo video](https://github.com/MinLee0210/Smart-Evaluation-Solution/blob/main/docs/demo/demo.mp4)
+
 
 ## 🧩 Features
 
-+ 1. Object Detection: Accurately identifies objects within images using advanced GenAI models.
++ **Object Detection:** Accurately identifies objects within images using advanced GenAI models.
 
-+ 2. Insight Generation: Offers suggestions based on detected objects and user-provided context.
++ **Insight Generation:** Offers suggestions based on detected objects and user-provided context.
 
-+ 3. User-Friendly Interface: Easy to use and understand, allowing for quick and efficient analysis.
++ **User-Friendly Interface:** Easy to use and understand, allowing for quick and efficient analysis.
 
 ## 🚀 Usage
 
@@ -94,6 +96,8 @@ Navigate to the project directory in your terminal. Run the following command:
 ```
 streamlit run app.py
 ```
+
+**Note:**
 
 For those whose machine can not serve any requirements of any models that we use, we suggest running this app on Colab. We can test the app by tunnelling Colab to our local machine. We leave the link of our Colab experiment [here](./docs/demo/test_SES.ipynb). Remember to get NGROK's API key for the best experiment.
 ## 🧑‍💻 Contributing
