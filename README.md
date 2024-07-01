@@ -52,7 +52,7 @@ This project leverages advanced AI technologies, including Optical Character Rec
   <source src="https://github.com/MinLee0210/Smart-Evaluation-Solution/blob/main/docs/demo/demo.mp4" type="video/mp4">
 </video>
 
-![demo video](https://github.com/MinLee0210/Smart-Evaluation-Solution/blob/main/docs/demo/demo.mp4)
+[demo video](https://github.com/MinLee0210/Smart-Evaluation-Solution/blob/main/docs/demo/demo.mp4)
 
 
 ## 🧩 Features
