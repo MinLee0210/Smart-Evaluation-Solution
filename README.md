@@ -48,11 +48,7 @@ This project leverages advanced AI technologies, including Optical Character Rec
 
 ## 👾 Demo
 
-<video controls="" width="400" height="300" muted="" loop="" autoplay="">
-  <source src="https://github.com/MinLee0210/Smart-Evaluation-Solution/blob/main/docs/demo/demo.mp4" type="video/mp4">
-</video>
-
-[![demo video](docs/static/angelhack.webp)](https://github.com/MinLee0210/Smart-Evaluation-Solution/blob/main/docs/demo/demo.mp4)
+[![demo video](https://media.istockphoto.com/id/1191661875/vector/video-button-red-play-icon-button-isolated-vector-illustration-arrow-click-icon-web-button.jpg?s=612x612&w=0&k=20&c=ahg6yTrkvNPnpF5OyybVAVDldsUi8nuu9TiQl0l27uA=)](https://github.com/MinLee0210/Smart-Evaluation-Solution/blob/main/docs/demo/demo.mp4)
 
 
 ## 🧩 Features
