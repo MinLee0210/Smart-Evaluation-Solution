@@ -4,7 +4,7 @@
 <h1 align="center">Smart Evaluation Solution</h1>
 
 <p align="center">
-  <em>This project is a collaborative effort to integrate cutting-edge AI technologies into Heineken Vietnam's operations, enhancing efficiency, customer experience, and strategic decision-makin</em>
+  <em>This project is a collaborative effort to integrate cutting-edge AI technologies into Heineken Vietnam's operations, enhancing efficiency, customer experience, and strategic decision-making</em>
 </p>
 
 ---
