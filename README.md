@@ -96,7 +96,11 @@ streamlit run app.py
 **Note:**
 
 For those whose machine can not serve any requirements of any models that we use, we suggest running this app on Colab. We can test the app by tunnelling Colab to our local machine. We leave the link of our Colab experiment [here](./docs/demo/test_SES.ipynb). Remember to get NGROK's API key for the best experiment.
-## 🧑‍💻 Contributing
+## 🧑‍💻 Contributors
+
+<a href="https://github.com/MinLee0210/Smart-Evaluation-Solution/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MinLee0210/Smart-Evaluation-Solution" />
+</a>
 
 - _Lê Đức Minh_ | **LinkedIn:** [/in/minh-le-duc/](https://www.linkedin.com/in/minh-le-duc-a62863172/) | **Gmail:** minh.leduc.0210@gmail.com
 - _Lê Nguyễn Đăng Khoa_ | **LinkedIn:** [/in/khoale-maiu/](https://www.linkedin.com/in/khoale-maiu/) | **Gmail:** khoale.maiu@gmail.com
